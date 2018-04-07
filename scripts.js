@@ -1,21 +1,14 @@
 
-var button = document.getElementById('add');
+var buttonAdd = document.getElementById('add');
 var list = document.getElementById('list');
 
 add.addEventListener('click', function() {
-    var element = document.createElement('li');
-    element.innerHTML = 'item';
+    var elementLi = document.createElement('li'),
+        numberElements = document.getElementsByTagName('li'); 
     
-    // lenght
-    // getElementsByTagName oraz właściwości length, aby dowiedzieć się, ile elementów ma lista ma w danym momencie.
-
-
-
-    var number = document.getElementsByTagName('list');
+    elementLi.innerHTML = 'item ' + numberElements.length;
     
-    list.appendChild(element);
-    }
-);
-
-
-
+    console.log(numberElements);
+          
+    list.appendChild(elementLi);
+});
